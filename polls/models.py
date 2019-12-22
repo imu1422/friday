@@ -2,6 +2,7 @@ import datetime
 
 from django.db import models
 from django.utils import timezone
+from django.urls import reverse  # new
 
 # Create your models here.
 
@@ -15,6 +16,9 @@ class Question(models.Model):
 
     def __str__(self):
         return self.question_text
+
+    def get_absolute_url(self):  # new
+        return reverse('polls:detail', args=[str(self.id)])
 
 
 class Choice(models.Model):
