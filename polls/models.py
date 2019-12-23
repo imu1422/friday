@@ -1,4 +1,5 @@
 import datetime
+import uuid
 
 from django.db import models
 from django.utils import timezone
@@ -8,6 +9,7 @@ from django.urls import reverse  # new
 
 
 class Question(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
 
