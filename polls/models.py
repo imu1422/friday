@@ -31,3 +31,12 @@ class Choice(models.Model):
 
     def __str__(self):
         return self.choice_text
+
+
+class Author(models.Model):
+    name = models.CharField(max_length=100)
+
+
+class Book(models.Model):
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    title = models.CharField(max_length=100)

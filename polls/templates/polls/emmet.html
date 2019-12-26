@@ -1,56 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Static Example</title>
-
-    <!-- Bootstrap 4 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Font Awesome -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-    <!-- Moment.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js" integrity="sha256-VBLiveTKyUZMEzJd6z2mhfxIqz3ZATCuVMawPZGzIfA=" crossorigin="anonymous"></script>
-
-    <!-- Tempus Dominus Bootstrap 4 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.1.2/css/tempusdominus-bootstrap-4.min.css" integrity="sha256-XPTBwC3SBoWHSmKasAk01c08M6sIA5gF5+sRxqak2Qs=" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.1.2/js/tempusdominus-bootstrap-4.min.js" integrity="sha256-z0oKYg6xiLq3yJGsp/LsY9XykbweQlHl42jHv2XTBz4=" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        #mybody {
+            margin: 20px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
-        <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" />
-        <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
-            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+    <div class="container h-100">
+
+        <div class="row d-flex justify-content-center h-100 align-items-center mt-4">
+            <div class="col col-lg-4 col-md-6">
+                <form action="/form.php" method="post">
+                    <div class="form-group">
+                        <label for="inputEmail" class="sr-only">Email</label>
+                        <input type="email" name="email" id="inputEmail" placeholder="Email Address" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword" class="sr-only">Password</label>
+
+                        <input type="password" class="form-control" required name="pass" id="password" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                </form>
+            </div>
+
+            <!-- ingiza form humu -->
+            <hr class="mt-6">
+            <br>
+            <div class="col col-lg-6 col-md-8">
+                <form action="" method="post"></form>
+                <input type="hidden" name="book_set-TOTAL_FORMS" value="6" id="id_book_set-TOTAL_FORMS"><input type="hidden" name="book_set-INITIAL_FORMS" value="3" id="id_book_set-INITIAL_FORMS"><input type="hidden" name="book_set-MIN_NUM_FORMS" value="0" id="id_book_set-MIN_NUM_FORMS"><input type="hidden" name="book_set-MAX_NUM_FORMS" value="1000" id="id_book_set-MAX_NUM_FORMS">
+                <tr>
+                    <th><label for="id_book_set-0-title">Title:</label></th>
+                    <td><input type="text" name="book_set-0-title" value="Toy Story" maxlength="100" id="id_book_set-0-title"></td>
+                </tr>
+                <tr>
+                    <th><label for="id_book_set-0-DELETE">Delete:</label></th>
+                    <td><input type="checkbox" name="book_set-0-DELETE" id="id_book_set-0-DELETE"><input type="hidden" name="book_set-0-author" value="3" id="id_book_set-0-author"><input type="hidden" name="book_set-0-id" value="1" id="id_book_set-0-id"></td>
+                </tr>
+                <tr>
+                    <th><label for="id_book_set-1-title">Title:</label></th>
+                    <td><input type="text" name="book_set-1-title" value="Umbeya Kikwajuni" maxlength="100" id="id_book_set-1-title"></td>
+                </tr>
+                <tr>
+                    <th><label for="id_book_set-1-DELETE">Delete:</label></th>
+                    <td><input type="checkbox" name="book_set-1-DELETE" id="id_book_set-1-DELETE"><input type="hidden" name="book_set-1-author" value="3" id="id_book_set-1-author"><input type="hidden" name="book_set-1-id" value="2" id="id_book_set-1-id"></td>
+                </tr>
+                <tr>
+                    <th><label for="id_book_set-2-title">Title:</label></th>
+                    <td><input type="text" name="book_set-2-title" value="Huda School Arts" maxlength="100" id="id_book_set-2-title"></td>
+                </tr>
+                <tr>
+                    <th><label for="id_book_set-2-DELETE">Delete:</label></th>
+                    <td><input type="checkbox" name="book_set-2-DELETE" id="id_book_set-2-DELETE"><input type="hidden" name="book_set-2-author" value="3" id="id_book_set-2-author"><input type="hidden" name="book_set-2-id" value="3" id="id_book_set-2-id"></td>
+                </tr>
+                <tr>
+                    <th><label for="id_book_set-3-title">Title:</label></th>
+                    <td><input type="text" name="book_set-3-title" maxlength="100" id="id_book_set-3-title"></td>
+                </tr>
+                <tr>
+                    <th><label for="id_book_set-3-DELETE">Delete:</label></th>
+                    <td><input type="checkbox" name="book_set-3-DELETE" id="id_book_set-3-DELETE"><input type="hidden" name="book_set-3-author" value="3" id="id_book_set-3-author"><input type="hidden" name="book_set-3-id" id="id_book_set-3-id"></td>
+                </tr>
+                <tr>
+                    <th><label for="id_book_set-4-title">Title:</label></th>
+                    <td><input type="text" name="book_set-4-title" maxlength="100" id="id_book_set-4-title"></td>
+                </tr>
+                <tr>
+                    <th><label for="id_book_set-4-DELETE">Delete:</label></th>
+                    <td><input type="checkbox" name="book_set-4-DELETE" id="id_book_set-4-DELETE"><input type="hidden" name="book_set-4-author" value="3" id="id_book_set-4-author"><input type="hidden" name="book_set-4-id" id="id_book_set-4-id"></td>
+                </tr>
+                <tr>
+                    <th><label for="id_book_set-5-title">Title:</label></th>
+                    <td><input type="text" name="book_set-5-title" maxlength="100" id="id_book_set-5-title"></td>
+                </tr>
+                <tr>
+                    <th><label for="id_book_set-5-DELETE">Delete:</label></th>
+                    <td><input type="checkbox" name="book_set-5-DELETE" id="id_book_set-5-DELETE"><input type="hidden" name="book_set-5-author" value="3" id="id_book_set-5-author"><input type="hidden" name="book_set-5-id" id="id_book_set-5-id"></td>
+                </tr>
+                </form>
+            </div>
+
+
         </div>
+
+
+    </div>
+
     </div>
 
 
-    <div class="card" style="width: 300px;">
-        <img src="https://cdn.onlinewebfonts.com/svg/img_87237.png"> card-img-top" alt="...">
-        <div class="card-body text-center">
-            <h5 class="card-title">Alice Liddel</h5>
-            <p class="card-text">Alice is a freelance web designer and developer based in London. She is specialized in HTML5, CSS3, JavaScript, Bootstrap, etc.</p>
-            <a href="#" class="btn btn-primary">View Profile</a>
-        </div>
-    </div>
-
-
-
-    <script>
-        $(function () {
-            $("#datetimepicker1").datetimepicker();
-        });
-    </script>
-
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script>
 </body>
 
 </html>
